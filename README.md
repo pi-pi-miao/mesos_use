@@ -22,9 +22,11 @@ http://mesos.mydoc.io/
 
 
 
-更多帮助信息：
+更多的帮助信息：
 
-我的博客地址www.cnblogs.com/pyrene
+[博客帮助](www.cnblogs.com/pyrene)
+
+
 
 
 
