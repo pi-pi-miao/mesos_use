@@ -9,7 +9,7 @@ mesos抽象除了cpu内存资源等，从而抽象了从机器里面具有容错
 
 #### mesos是如何让twitter摆脱失败鲸的问题呢？就看下面的架构
 
-![Mesos架构图](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\Mesos架构图.png)
+![Mesos架构图](https://github.com/PyreneGitHub/mesos_use/blob/master/picture/Mesos%E6%9E%B6%E6%9E%84%E5%9B%BE.png)
 
 ```shell
 上面的master是第一层调度，支持高可用集群的，管理所有的slave选举。slave运行在虚拟机之上Mesos slave运行具体的任务如hadoop ：这就是第一层调度
