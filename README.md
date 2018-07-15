@@ -19,3 +19,12 @@ https://legacy.gitbook.com/book/mesos-cn/mesos-cn/details
 http://mesos.mydoc.io/
 
 ```
+
+
+
+更多帮助信息：
+
+我的博客地址www.cnblogs.com/pyrene
+
+
+
