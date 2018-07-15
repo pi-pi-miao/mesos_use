@@ -9,7 +9,7 @@ mesos抽象除了cpu内存资源等，从而抽象了从机器里面具有容错
 
 #### mesos是如何让twitter摆脱失败鲸的问题呢？就看下面的架构
 
-![Mesos架构图](D:\Picture\Mesos架构图.png)
+![Mesos架构图](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\Mesos架构图.png)
 
 ```shell
 上面的master是第一层调度，支持高可用集群的，管理所有的slave选举。slave运行在虚拟机之上Mesos slave运行具体的任务如hadoop ：这就是第一层调度
@@ -22,7 +22,7 @@ mesos抽象除了cpu内存资源等，从而抽象了从机器里面具有容错
 
 ```
 
-![Mesos的资源分配](D:\Picture\Mesos的资源分配.png)
+![Mesos的资源分配](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\Mesos的资源分配.png)
 
 ```shell
 从上个图知道，slave是运行在物理机或者虚拟机上的mesos进程是mesos集群的部分，framework由调度器和执行器组成，被注册在mesos，已使用mesos中的资源
@@ -43,11 +43,11 @@ framework也可以拒绝资源邀约
 
 Marathon适合运行长期存在的服务。
 
-![Mesos的Marathon](D:\Picture\Mesos的Marathon.png)
+![Mesos的Marathon](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\Mesos的Marathon.png)
 
 Mesos相当于linux的内核，marathon相当于linux内核的外壳管理程序，Mesos不止是一台机器的内核，是成千上万的内核，是分布式内核
 
-![marathon是怎么运行的](D:\Picture\marathon是怎么运行的.png)
+![marathon是怎么运行的](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\marathon是怎么运行的.png)
 
 ```
 上面的图有两个流程
@@ -84,7 +84,7 @@ marathon特征：
 
 Mesos Master是通过zookeeper来进行高可用的。
 
-![mesos调度手画图](D:\Picture\mesos调度手画图.png)
+![mesos调度手画图](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\mesos调度手画图.png)
 
 ```
 版本环境：
@@ -161,7 +161,7 @@ systemctl disable firewalld.service
 
 这里的是
 
-![mesos脚本](D:\Picture\mesos脚本.png)
+![mesos脚本](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\mesos脚本.png)
 
 之后执行sh mesos.sh
 
@@ -169,7 +169,7 @@ systemctl disable firewalld.service
 
 http://192.168.154.132:5050/#/
 
-![mesos的web界面](D:\Picture\mesos的web界面.png)
+![mesos的web界面](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\mesos的web界面.png)
 
 frameworks是第二级调度
 
@@ -241,7 +241,7 @@ I0714 23:56:32.027320    11 master.cpp:1803] Recovered 0 agents from the registr
 
 第一行中的-d表示后台运行
 
-![mesos-slave](D:\Picture\mesos-slave.png)
+![mesos-slave](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\mesos-slave.png)
 
 ```shell
 1、启动脚本 sh mesos-slave.sh
@@ -300,7 +300,7 @@ http://192.168.154.132:5050/#/agents
 
 如果让下面的红色部分显示成正确的ip地址
 
-![修改hostname](D:\Picture\修改hostname.png)
+![修改hostname](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\修改hostname.png)
 
 需要修改下面的master中的脚本修改成如下：
 
@@ -374,7 +374,7 @@ http://192.168.154.132:5050/#/
 
 可以看到下面是可用的资源
 
-![可用资源](D:\Picture\可用资源.png)
+![可用资源](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\可用资源.png)
 
 # 在132安装marathon
 
@@ -402,7 +402,7 @@ docker run -d --net=host \
 
 ```
 
-然后看到如下：![marathon的访问](D:\Picture\marathon的访问.png)
+然后看到如下：![marathon的访问](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\marathon的访问.png)
 
 点击create application  创建一个test
 
@@ -412,13 +412,13 @@ while [ true ];do sleep 5;echo 'hello mesos' ;done
 
 点进去看到如下
 
-![marathon创建程序](D:\Picture\marathon创建程序.png)
+![marathon创建程序](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\marathon创建程序.png)
 
 访问mesos的ui，可以看到运行的程序和framework
 
-![ui查看mesos的](D:\Picture\ui查看mesos的.png)
+![ui查看mesos的](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\ui查看mesos的.png)
 
-![查看mesos中的frameworks](D:\Picture\查看mesos中的frameworks.png)
+![查看mesos中的frameworks](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\查看mesos中的frameworks.png)
 
 # 安装marathon-lb在4中
 
