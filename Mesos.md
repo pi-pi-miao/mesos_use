@@ -22,7 +22,7 @@ mesos抽象除了cpu内存资源等，从而抽象了从机器里面具有容错
 
 ```
 
-![Mesos的资源分配](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\Mesos的资源分配.png)
+![Mesos的资源分配](https://github.com/PyreneGitHub/mesos_use/blob/master/picture/Mesos%E7%9A%84%E8%B5%84%E6%BA%90%E5%88%86%E9%85%8D.png)
 
 ```shell
 从上个图知道，slave是运行在物理机或者虚拟机上的mesos进程是mesos集群的部分，framework由调度器和执行器组成，被注册在mesos，已使用mesos中的资源
@@ -43,11 +43,11 @@ framework也可以拒绝资源邀约
 
 Marathon适合运行长期存在的服务。
 
-![Mesos的Marathon](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\Mesos的Marathon.png)
+![Mesos的Marathon](https://github.com/PyreneGitHub/mesos_use/blob/master/picture/Mesos%E7%9A%84Marathon.png)
 
 Mesos相当于linux的内核，marathon相当于linux内核的外壳管理程序，Mesos不止是一台机器的内核，是成千上万的内核，是分布式内核
 
-![marathon是怎么运行的](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\marathon是怎么运行的.png)
+![marathon是怎么运行的](https://github.com/PyreneGitHub/mesos_use/blob/master/picture/marathon%E6%98%AF%E6%80%8E%E4%B9%88%E8%BF%90%E8%A1%8C%E7%9A%84.png)
 
 ```
 上面的图有两个流程
@@ -84,7 +84,7 @@ marathon特征：
 
 Mesos Master是通过zookeeper来进行高可用的。
 
-![mesos调度手画图](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\mesos调度手画图.png)
+![mesos调度手画图](https://github.com/PyreneGitHub/mesos_use/blob/master/picture/mesos%E8%B0%83%E5%BA%A6%E6%89%8B%E7%94%BB%E5%9B%BE.png)
 
 ```
 版本环境：
@@ -161,7 +161,7 @@ systemctl disable firewalld.service
 
 这里的是
 
-![mesos脚本](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\mesos脚本.png)
+![mesos脚本](https://github.com/PyreneGitHub/mesos_use/blob/master/picture/mesos%E8%84%9A%E6%9C%AC.png)
 
 之后执行sh mesos.sh
 
@@ -169,7 +169,7 @@ systemctl disable firewalld.service
 
 http://192.168.154.132:5050/#/
 
-![mesos的web界面](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\mesos的web界面.png)
+![mesos的web界面](https://github.com/PyreneGitHub/mesos_use/blob/master/picture/mesos%E7%9A%84web%E7%95%8C%E9%9D%A2.png)
 
 frameworks是第二级调度
 
@@ -241,7 +241,7 @@ I0714 23:56:32.027320    11 master.cpp:1803] Recovered 0 agents from the registr
 
 第一行中的-d表示后台运行
 
-![mesos-slave](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\mesos-slave.png)
+![mesos-slave](https://github.com/PyreneGitHub/mesos_use/blob/master/picture/mesos-slave.png)
 
 ```shell
 1、启动脚本 sh mesos-slave.sh
@@ -300,7 +300,7 @@ http://192.168.154.132:5050/#/agents
 
 如果让下面的红色部分显示成正确的ip地址
 
-![修改hostname](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\修改hostname.png)
+![修改hostname](https://github.com/PyreneGitHub/mesos_use/blob/master/picture/%E4%BF%AE%E6%94%B9hostname.png)
 
 需要修改下面的master中的脚本修改成如下：
 
@@ -374,7 +374,7 @@ http://192.168.154.132:5050/#/
 
 可以看到下面是可用的资源
 
-![可用资源](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\可用资源.png)
+![可用资源](https://github.com/PyreneGitHub/mesos_use/blob/master/picture/%E5%8F%AF%E7%94%A8%E8%B5%84%E6%BA%90.png)
 
 # 在132安装marathon
 
@@ -412,13 +412,13 @@ while [ true ];do sleep 5;echo 'hello mesos' ;done
 
 点进去看到如下
 
-![marathon创建程序](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\marathon创建程序.png)
+![marathon创建程序](https://github.com/PyreneGitHub/mesos_use/blob/master/picture/marathon%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F.png)
 
 访问mesos的ui，可以看到运行的程序和framework
 
-![ui查看mesos的](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\ui查看mesos的.png)
+![ui查看mesos的](https://github.com/PyreneGitHub/mesos_use/blob/master/picture/ui%E6%9F%A5%E7%9C%8Bmesos%E7%9A%84.png)
 
-![查看mesos中的frameworks](C:\Users\Administrator\Desktop\docker微服务学习\docker_mesos\mesos_use\picture\查看mesos中的frameworks.png)
+![查看mesos中的frameworks](https://github.com/PyreneGitHub/mesos_use/blob/master/picture/%E6%9F%A5%E7%9C%8Bmesos%E4%B8%AD%E7%9A%84frameworks.png)
 
 # 安装marathon-lb在4中
 
